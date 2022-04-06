@@ -41,6 +41,8 @@ public class Secretario extends Empleado {
 		return super.toString() + "Secretario [despacho=" + despacho + ", fax=" + fax + ", incsalanual=" + incsalanual + "]";
 	}
 	
-	
+	public int IncSal(int porc) {
+		return getSalario() + ((porc * getSalario())/100);
+	}
 
 }
