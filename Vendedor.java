@@ -46,12 +46,34 @@ public class Vendedor extends Empleado {
 		this.telmov = telmov;
 	}
 
-	public ArrayList<String> getClientes() {
+	/*public ArrayList<String> getClientes() {
 		return Clientes;
 	}
 
 	public void setClientes(ArrayList<String> clientes) {
 		Clientes = clientes;
+	} */
+	
+	public void AddCliente(String nombre) { //Añade un elemente a la lista
+		Clientes.add(nombre);
+	}
+	
+	public void QuitCliente(int i) { //Quita un elemento de la lista
+		Clientes.remove(i);
+	}
+	
+	public void ListClientes() { //Imprime la lista actual de clientes
+		for(int i = 0; i < Clientes.size(); i++) {
+			System.out.print(i + " - ");
+			Clientes.get(i);
+			System.out.println("");
+		}
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " Vendedor [Auto=" + Auto + ", AreaVta=" + AreaVta + ", telmov=" + telmov + ", Clientes=" + Clientes
+				+ "]";
 	}
 	
 	
